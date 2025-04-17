@@ -1,8 +1,56 @@
-# React + Vite
+# Netflex GPT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Steps
 
-Currently, two official plugins are available:
+    - Create React App
+    - Configured Tailwindcss
+    - React Router Dom
+    - Lucid react icon
+    - Regex -> Form validation
+    - Firebase Setup
+    - Deploying on production
+    - Create SignUp User
+    - Login
+    - Setup Redux Store
+    - Implemented signout feature
+    - Update profile
+    - Fetch Movies from (TMDB Api)
+    - Bug Fix : Redirect user to login (If not loggedIn)
+    - Bug Fix : Redirect user to /browse (If user is loggedIn)
+    - Unsubscribed to onAuthStateChange Callback
+    - Register TMDB API & create an app to get "Access Token"
+    - Get data from TMDB (Now Playing Movies) -> storing in ReduxStore(movieSlice)
+    - Created Custom Hook for (useNowPlaying, useAuth, useVideoTrailer)
+    - Fetched vidoe trailer from TMDM and Populated redux store
+    - Embedded Youtube Video
+    - Build Secondary Component (Recommended MovieList)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# API ENDPOINTS
+
+    - Login
+        - Username
+        - Password
+    - Signup
+    - Browse (Only Authenticated user)
+        - MainContainer
+            - Trailor (in background)
+            - Header
+                - Logo
+                - Navs
+                - Search Movie
+                - Notification
+                - User icon (dropdown icon)
+            - Movie Details
+                - Movie name
+                - Movie description
+                - Button (Play / More Info)
+
+        - SecondaryContainer
+            - Movies List (Horizontal Scroll)
+                - Suggestion List
+                - Continue watching
+                - Top 10 Movies
+
+    - NetflixGPT
+        - Searchbar
+        - Movie Suggestion
