@@ -1,4 +1,220 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "~@flaticon/flaticon-uicons/css/all/all";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Color Variables */
+:root {
+    --pink: #FCB6D8;
+    --white: #FBFAFA;
+    --black: #2A252B;
+    --blue: #4DA8D5;
+    --brown: #BF795E;
+}
+
+/* Scrollbar Custom */
+.scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* Base Body */
+body {
+    background-color: var(--black);
+    font-family: 'Rubik', sans-serif;
+}
+
+
+#header-carousel .slick-slide {
+    position: relative;
+    z-index: 10 !important;
+    right: -10px;
+    width: auto !important;
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+#header-carousel .slick-track {
+    position: relative;
+    z-index: 10 !important;
+}
+
+#header-carousel .slick-dots {
+    position: relative;
+    right: 35px;
+    align-self: center;
+    z-index: 101;
+}
+
+#header-carousel .slick-dots li button {
+    font-size: 0;
+    height: 30px;
+    width: 20px;
+}
+
+#header-carousel .slick-dots li button:before {
+    color: var(--white);
+    content: "•";
+    font-size: 35px;
+    border-radius: 100px;
+    line-height: 10px;
+    transition: 0.6s;
+}
+
+#header-carousel .slick-dots .slick-active {
+    margin-bottom: 6px;
+}
+
+#header-carousel .slick-dots .slick-active button:before {
+    font-size: 19px !important;
+    background-color: var(--white) !important;
+}
+
+#all-music-page .slick-track {
+    display: flex;
+    gap: 10px;
+}
+
+.rhap_header {
+    margin-bottom: 0 !important;
+}
+
+.rhap_play-pause-button {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.rhap_main .rhap_progress-container .rhap_progress-bar .rhap_download-progress {
+    opacity: 0.6;
+}
+
+.rhap_main .rhap_volume-container .rhap_volume-indicator,
+.rhap_main .rhap_progress-container .rhap_progress-bar div {
+    background-color: #FBFAFA;
+}
+
+.rhap_main .rhap_time {
+    color: #FBFAFA;
+}
+
+.rhap_main svg path {
+    fill: #FBFAFA;
+}
+
+.signup-content .input-div,
+.login-content .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 30px 0;
+    padding: 5px 0;
+}
+
+.signup-content .i,
+.login-content .i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-content .i i,
+.login-content .i i {
+    transition: 0.3s;
+}
+
+.signup-content .input,
+.login-content .input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.signup-content .input-lable,
+.login-content .input-lable {
+    cursor: text;
+    position: absolute;
+    transform: translate(40px, 5px);
+    transition: transform .25s;
+    top: 1px;
+}
+
+.signup-content .input:focus+.input-lable,
+.login-content .input:focus+.input-lable,
+.signup-content .input:valid+.input-lable,
+.login-content .input:valid+.input-lable {
+    transform: translate(30px, -13px) scale(.8);
+}
+
+.signup-content .btn,
+.login-content .btn {
+    display: block;
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(65deg, #4DA8D5, rgba(77, 168, 213, 0.72), #4DA8D5);
+    background-size: 200%;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-position 0.7s;
+}
+
+.signup-content .btn:hover,
+.login-content .btn:hover {
+    background-position: right;
+}
+
+
+
+
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: var(--pink) #0000;
+    animation: l16 1.5s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 4px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.loader::before {
+    border-color: var(--blue) #0000;
+    animation: inherit;
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.loader::after {
+    margin: 12px;
+}
+
+@keyframes l16 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
